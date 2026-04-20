@@ -681,6 +681,8 @@ def main():
 
         st.markdown("### 👥 Team")
         st.markdown("- Shubham")
+        st.markdown("- Augstay")
+        st.markdown("- Aryan")
 
         st.markdown("### 📁 Project Info")
         st.markdown("""

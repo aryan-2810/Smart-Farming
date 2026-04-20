@@ -1,0 +1,117 @@
+(env) PS D:\Download\Smart-Farming-main> python scripts/train_yield_model.py
+[WARNING] XGBoost not available. Install with: pip install xgboost
+
+======================================================================
+CROP YIELD PREDICTION - MULTI-MODEL TRAINING
+======================================================================
+======================================================================
+LOADING AND PREPROCESSING DATA
+======================================================================
+
+[INFO] Loading dataset: D:\Download\Smart-Farming-main\data\crop_production.csv
+[OK] Dataset loaded: 246091 rows, 7 columns
+Calculating yield from Production/Area...
+Yield calculated. Mean yield: 41.65
+
+[INFO] Handling missing values...
+[OK] No missing values found
+
+[INFO] Handling outliers using IQR method...
+  Area: Removed 39233 outliers
+  Production: Removed 28397 outliers
+[OK] Total outliers removed: 67630
+[OK] Dataset size after outlier removal: 171208 rows
+
+[INFO] Features: 7 columns
+[INFO] Target: yield
+[INFO] Features: ['State_Name', 'District_Name', 'Crop_Year', 'Season', 'Crop', 'Area', 'Production']
+
+[INFO] Encoding categorical features...
+  State_Name: Encoded 33 unique values
+  District_Name: Encoded 646 unique values
+  Season: Encoded 6 unique values
+  Crop: Encoded 105 unique values
+
+[INFO] Scaling features...
+[OK] Features scaled
+
+[INFO] Splitting data into train/test (80/20)...
+[OK] Training set: 136966 samples
+[OK] Test set: 34242 samples
+
+======================================================================
+TRAINING MODELS
+======================================================================
+
+[INFO] Training RandomForestRegressor...
+[OK] Training completed in 16.21 seconds
+
+[INFO] Training LinearRegression...
+[OK] Training completed in 0.13 seconds
+
+======================================================================
+COMPARING MODELS
+======================================================================
+
+[INFO] Evaluating RandomForestRegressor...
+  R² Score: 0.9884
+  MAE:      0.0408
+  RMSE:     0.9603
+
+[INFO] Evaluating LinearRegression...
+  R² Score: 0.0955
+  MAE:      2.6052
+  RMSE:     8.4705
+
+----------------------------------------------------------------------
+Model                          R² Score        MAE             RMSE
+----------------------------------------------------------------------
+RandomForestRegressor          0.9884          0.0408          0.9603
+LinearRegression               0.0955          2.6052          8.4705
+
+======================================================================
+BEST MODEL SELECTED
+======================================================================
+
+Model: RandomForestRegressor
+R² Score: 0.9884
+MAE:      0.0408
+RMSE:     0.9603
+
+======================================================================
+SAVING RESULTS
+======================================================================
+
+[OK] Best model saved to: models\best_yield_model.pkl
+[OK] Evaluation metrics saved to: D:\Download\Smart-Farming-main\results\metrics\yield_model_evaluation.txt
+
+======================================================================
+FINAL EVALUATION METRICS
+======================================================================
+
+[WINNER] Best Model: RandomForestRegressor
+----------------------------------------------------------------------
+R² Score (Coefficient of Determination): 0.9884
+  -> 98.84% of variance in yield is explained by the model
+
+MAE (Mean Absolute Error):              0.0408
+  -> Average absolute difference between actual and predicted yield
+
+RMSE (Root Mean Squared Error):        0.9603
+  -> Standard deviation of prediction errors (in same units as target)
+
+----------------------------------------------------------------------
+ALL MODELS PERFORMANCE
+----------------------------------------------------------------------
+
+Model                          R² Score        MAE             RMSE
+----------------------------------------------------------------------
+RandomForestRegressor          0.9884          0.0408          0.9603
+LinearRegression               0.0955          2.6052          8.4705
+======================================================================
+
+Total training time: 0.37 minutes (22.09 seconds)
+
+======================================================================
+TRAINING COMPLETE!
+======================================================================
