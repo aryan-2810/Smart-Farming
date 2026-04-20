@@ -1,13 +1,3 @@
-"""
-Smart Farming ML - Crop Recommendation App
-==========================================
-
-Streamlit web application for crop recommendation based on soil and climate parameters.
-
-Author: Shubham Singh
-Date: 2025
-"""
-
 import streamlit as st
 import pandas as pd
 import numpy as np
