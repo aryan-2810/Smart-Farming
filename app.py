@@ -1417,7 +1417,7 @@ def main():
     st.markdown("""
     <div style='text-align: center; padding: 2rem; color: #666;'>
         <p><strong>Smart Farming ML System</strong></p>
-        <p>Developed by <strong>Shubham</strong></p>
+        <p>Developed by <strong>Aryan</strong></p>
         <p>🌾 Making farming smarter with Machine Learning 🌾</p>
     </div>
     """, unsafe_allow_html=True)
