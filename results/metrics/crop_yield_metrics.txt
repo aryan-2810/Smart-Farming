@@ -1,0 +1,30 @@
+============================================================
+CROP YIELD PREDICTION MODEL - EVALUATION METRICS
+============================================================
+
+REGRESSION METRICS:
+------------------------------------------------------------
+R² Score (Coefficient of Determination): 0.9576
+  - Interpretation: 95.76% of variance in yield is explained by the model
+  - Range: [0, 1], Higher is better
+
+Mean Absolute Error (MAE): 4.1002
+  - Average absolute difference between actual and predicted yield
+  - Lower is better
+
+Mean Squared Error (MSE): 16140.3554
+  - Average squared difference between actual and predicted yield
+  - Lower is better
+
+Root Mean Squared Error (RMSE): 127.0447
+  - Square root of MSE, in same units as target variable
+  - Lower is better
+
+Mean Absolute Percentage Error (MAPE): 2.57%
+  - Average percentage error
+  - Lower is better
+
+DATASET STATISTICS:
+------------------------------------------------------------
+Mean Yield: 39.9184 tons/hectare
+Number of test samples: 47768

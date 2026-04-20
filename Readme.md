@@ -1,0 +1,124 @@
+<div align="center">
+
+# 🌾 Smart Farming ML — Crop Recommendation & Yield Prediction
+
+AI-powered Smart Farming Assistant. Recommends the best crop and predicts yield using ML. Minimal, elegant, and fast.
+
+</div>
+
+## ✨ Project Overview
+- Predict the most suitable crop based on soil and climate inputs.
+- Estimate expected yield (tons/hectare) for the recommended crop.
+- Built with a clean ML pipeline and a Streamlit UI.
+
+## 🚀 Features
+- 🌱 Crop recommendation (classification)
+- 📈 Crop yield prediction (regression)
+- 🌤️ Real-time weather fetch (OpenWeatherMap)
+- 📚 Crop info from Wikipedia (with optional images)
+- 🧪 Fertilizer guidance and soil tips
+- 🔬 XAI — SHAP-based insights and plots
+- 📄 One-click PDF report download
+- 📊 Charts: Yield vs Temperature/Rainfall
+- 🧷 Model tuning and evaluation utilities
+
+## 🧰 Tech Stack
+- Python 3.8+
+- pandas, numpy, scikit-learn, xgboost (optional)
+- matplotlib, seaborn
+- shap, joblib
+- streamlit
+- requests, python-dotenv, fpdf
+
+## 🛠️ Installation
+```bash
+git clone <repo-url>
+cd SmartFarmingML
+
+python -m venv venv
+venv\Scripts\activate   # Windows
+# source venv/bin/activate  # Linux/Mac
+
+pip install -r requirements.txt
+
+# Add your API key (optional but recommended)
+echo OPENWEATHER_API_KEY=your_key_here > .env
+```
+
+## ▶️ How to Run
+1) Train models (once):
+```bash
+python scripts/auto_tuning.py          # best crop model → models/best_crop_model.pkl
+python scripts/train_yield_model.py    # best yield model → models/best_yield_model.pkl
+```
+2) (Optional) Generate XAI plots:
+```bash
+python scripts/xai_analysis.py
+```
+3) Launch the app:
+```bash
+streamlit run app.py
+```
+
+## 📂 Folder Structure
+```text
+.
+├─ app.py
+├─ data/
+│  ├─ crop_recommendation.csv
+│  └─ crop_production.csv
+├─ models/
+│  ├─ best_crop_model.pkl
+│  └─ best_yield_model.pkl
+├─ outputs/
+│  ├─ charts/
+│  │  └─ <crop>/yield_chart_YYYY-MM-DD_HH-MM.png
+│  └─ reports/
+│     └─ <crop>/Crop_Report_YYYY-MM-DD_HH-MM.pdf
+├─ results/
+│  ├─ feature_importance_bar.png
+│  ├─ shap_summary.png
+│  ├─ metrics/
+│  │  ├─ crop_recommendation_metrics.txt
+│  │  ├─ yield_model_evaluation.txt
+│  │  └─ confusion_matrix_crop_recommendation.png
+│  └─ yield_comparison.png
+├─ scripts/
+│  ├─ auto_tuning.py
+│  ├─ crop_recommendation_model.py
+│  ├─ eda.py
+│  ├─ evaluation_visuals.py
+│  ├─ load_data.py
+│  ├─ predict_crop.py
+│  ├─ predict_yield.py
+│  ├─ preprocess_data.py
+│  ├─ train_yield_model.py
+│  ├─ visuals_and_report.py
+│  ├─ visuals/chart_generator.py
+│  └─ reports/report_generator.py
+├─ utils.py
+├─ requirements.txt
+└─ Readme.md
+```
+
+## 👥 Contributors
+- Shubham Singh
+
+## 🖼️ Sample Output Screenshots
+> Replace/add your own screenshots in these paths if needed.
+
+```text
+results/feature_importance_bar.png
+results/metrics/confusion_matrix_crop_recommendation.png
+outputs/charts/yield_vs_weather_20251103_205440.png
+```
+
+![Feature Importance](results/feature_importance_bar.png)
+
+![Confusion Matrix](results/metrics/confusion_matrix_crop_recommendation.png)
+
+![Yield vs Weather](outputs/charts/yield_vs_weather_20251103_205440.png)
+
+---
+
+Made with 🌾 and ML.

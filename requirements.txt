@@ -1,0 +1,17 @@
+pandas
+numpy
+scikit-learn
+seaborn
+matplotlib
+joblib
+python-dotenv
+requests
+xgboost
+shap
+streamlit
+fpdf
+
+tensorflow>=2.10
+openai
+faiss-cpu
+tiktoken

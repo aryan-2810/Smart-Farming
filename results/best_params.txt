@@ -1,0 +1,38 @@
+======================================================================
+AUTOMATED MODEL TUNING RESULTS - CROP RECOMMENDATION
+======================================================================
+
+BEST MODEL SUMMARY
+----------------------------------------------------------------------
+Model Name: RandomForestClassifier
+Cross-Validation Accuracy: 0.9960
+Test Set Accuracy: 0.9955
+
+Best Hyperparameters:
+  max_depth: 10
+  min_samples_leaf: 1
+  min_samples_split: 5
+  n_estimators: 100
+
+======================================================================
+ALL MODELS COMPARISON
+======================================================================
+
+1. RandomForestClassifier
+   CV Accuracy: 0.9960
+   Test Accuracy: 0.9955
+   Parameters: {'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 100}
+
+2. SVC
+   CV Accuracy: 0.9869
+   Test Accuracy: 0.9909
+   Parameters: {'C': 1, 'gamma': 1, 'kernel': 'rbf'}
+
+3. DecisionTreeClassifier
+   CV Accuracy: 0.9852
+   Test Accuracy: 0.9818
+   Parameters: {'criterion': 'gini', 'max_depth': 15, 'min_samples_leaf': 1, 'min_samples_split': 5}
+
+======================================================================
+Note: Models are ranked by Cross-Validation accuracy.
+======================================================================

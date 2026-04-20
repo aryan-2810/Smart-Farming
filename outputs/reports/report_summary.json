@@ -1,0 +1,12 @@
+[
+  {
+    "crop": "rice",
+    "chart_path": "C:\\Users\\HP\\Desktop\\Capst\\outputs\\charts\\rice\\yield_chart_2025-11-04_00-17.png",
+    "pdf_path": "C:\\Users\\HP\\Desktop\\Capst\\outputs\\reports\\rice\\Crop_Report_2025-11-04_00-17.pdf"
+  },
+  {
+    "crop": "wheat",
+    "chart_path": "C:\\Users\\HP\\Desktop\\Capst\\outputs\\charts\\wheat\\yield_chart_2025-11-04_00-18.png",
+    "pdf_path": "C:\\Users\\HP\\Desktop\\Capst\\outputs\\reports\\wheat\\Crop_Report_2025-11-04_00-18.pdf"
+  }
+]

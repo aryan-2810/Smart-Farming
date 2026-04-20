@@ -1,0 +1,29 @@
+========================================
+SETUP INSTRUCTIONS
+Machine Learning-based Crop Recommendation and Crop Yield Prediction System
+========================================
+
+1. CREATE VIRTUAL ENVIRONMENT
+   ---------------------------
+   python -m venv venv
+
+2. ACTIVATE VIRTUAL ENVIRONMENT
+   -----------------------------
+   On Windows:
+   venv\Scripts\activate
+
+   On Linux/Mac:
+   source venv/bin/activate
+
+3. INSTALL DEPENDENCIES
+   ---------------------
+   pip install -r requirements.txt
+
+4. VERIFY INSTALLATION (Optional)
+   -------------------------------
+   pip list
+
+========================================
+Note: Make sure you have Python 3.7 or higher installed.
+========================================
+
